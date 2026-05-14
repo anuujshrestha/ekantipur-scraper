@@ -1,0 +1,39 @@
+{
+  "entertainment_news": [
+    {
+      "title": "‘गरिबको चमेली’ : बालेनले गाए, बालेनतिरै फर्कियो",
+      "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/miscellaneous/sukumbashiprotestatmaitighar202605084266-1252026110024-1000x0.jpg&w=701&h=0",
+      "category": "मनोरञ्जन",
+      "author": "रीना मोक्तान"
+    },
+    {
+      "title": "प्रतिबन्ध लागेको ५५ वर्षपछि कान्समा ‘द डेभिल्स’",
+      "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/the-devils-1252026100643-1000x0.jpg&w=701&h=0",
+      "category": "मनोरञ्जन",
+      "author": "कान्तिपुर संवाददाता"
+    },
+    {
+      "title": "‘लालीबजार’ समीक्षा : कसिलो प्रस्तुति, कमजोर महिला चरित्रचित्रण",
+      "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/third-party/laalibazar-1152026055804-1000x0.jpg&w=701&h=0",
+      "category": "मनोरञ्जन",
+      "author": "रीना मोक्तान"
+    },
+    {
+      "title": "मंगलबारदेखि कान्स, यी फिल्मले तान्न सक्नेछन् संसारको ध्यान",
+      "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/rooney-mara-cannes-051625-7b45cee2c0e3462ea85b82298e403bd6-1152026102434-1000x0.jpg&w=701&h=0",
+      "category": "मनोरञ्जन",
+      "author": "इकान्तिपुर डेस्क"
+    },
+    {
+      "title": "‘सर्ट फिल्म डेभलपमेन्ट ल्याब’मा ६ प्रोजेक्ट छनोट",
+      "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2026/entertainment/6849380659551497904486664118695711161960718n-0952026064840-1000x0.jpg&w=701&h=0",
+      "category": "मनोरञ्जन",
+      "author": "कान्तिपुर संवाददाता"
+    }
+  ],
+  "cartoon_of_the_day": {
+    "title": "गजब छ बा!",
+    "image_url": "https://assets-cdn-api.ekantipur.com/thumb.php?src=https://assets-cdn.ekantipur.com/uploads/source/news/kantipur/2022/third-party/editorial-cartoon-kantipur-830130-1352026064155-1000x0.jpg&w=601&h=0",
+    "author": null
+  }
+}

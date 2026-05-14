@@ -1,0 +1,72 @@
+Prompt 1 : Ask mode :
+Write a complete scraper.py using Python sync Playwright
+that scrapes ekantipur.com. Write code only, do not scrape.
+Zero hardcoded data values — everything comes from the page.
+
+=== TASK 1: Entertainment News ===
+URL: https://ekantipur.com/entertainment
+
+1. Navigate and wait for "div.category-inner-wrapper"
+2. Extract category name dynamically from the page header:
+   selector: div.category-name p a → text_content().strip()
+   This is used as the category value for all 5 articles.
+   If div.category-name p a is not found, fall back to
+   extracting the path segment from page.url (e.g. "entertainment"
+   from "ekantipur.com/entertainment") and use that as category.
+   Always wrap category extraction in try/except.
+	
+3. Scroll page gradually in 6 steps using window.scrollTo
+   to trigger lazy-loaded images, then wait 2000ms
+4. Extract first 5 div.category-inner-wrapper cards:
+   - title: div.category-description h2 a → text_content().strip()
+   - image_url: div.category-image figure img → get_attribute("src")
+   - category: the value extracted in step 2
+   - author: div.author-name p a → text_content().strip()
+             wrap in try/except, None if missing
+
+=== TASK 2: Cartoon ===
+URL: https://ekantipur.com/cartoon
+
+Wait for "div.cartoon-wrapper", extract FIRST one only:
+- image_url: div.cartoon-image figure img → get_attribute("src")
+- div.cartoon-description p → text_content().strip() → raw text
+  Parse like this:
+  if raw ends with " -": strip it, title = remainder, author = None
+  elif " - " in raw: split once, title = first, author = second (None if empty)
+  else: title = raw, author = None
+
+=== REQUIREMENTS ===
+- sync_playwright, headless=False
+- try/except around every single element access
+- wait_for_selector before extracting each page
+- Every comment must explain WHY not just what
+- ensure_ascii=False, indent=2 for output.json
+- Module-level docstring explaining script purpose
+- Run with: uv run python scraper.py
+
+=== OUTPUT FORMAT ===
+{
+  "entertainment_news": [
+    {"title":"...","image_url":"...","category":"...","author":"..."}
+  ],
+  "cartoon_of_the_day": {
+    "title":"...","image_url":"...","author":"..."
+  }
+}
+
+Prompt 2 : Agent mode : 
+The scraper.py is missing inline # comments inside function 
+bodies. The docstrings exist but every logical block inside 
+each function needs a # comment explaining WHY it exists.
+
+Add # comments before:
+- Every wait_for_selector call: why we must wait before reading DOM
+- Category extraction: why we get it before scrolling
+- The scroll block: why scrolling triggers lazy-loaded images
+- The 2000ms wait: why we pause after scrolling
+- Every try/except: what breaks without this protection
+- The .first usage on cartoon: why we only want the first one
+- The caption parsing block: why title and author are combined in one p tag
+
+Do not change any code. Only add # comments inside function bodies.
+Show the full updated file.
